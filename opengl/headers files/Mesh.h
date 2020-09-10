@@ -27,11 +27,16 @@ public:
     GLuint* indices;
     unsigned int numVertices;
 
-    Mesh(Vertex* vertices, GLuint* indices, unsigned int numVertices);
-    virtual ~Mesh();
-private:
-    Mesh(const Mesh& other);
-    void operator=(const Mesh& other);
+    GLuint vaoID = 0;
+    GLuint vboIDs[1];
+    GLuint eboID = 0;
+
+    Mesh(Vertex* vertices, GLuint* indices, unsigned int numVertices, unsigned int numIndices);
+    void init();
+
+    unsigned int numIndices;
+
+    ~Mesh();
 };
 
 

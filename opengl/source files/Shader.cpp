@@ -7,11 +7,6 @@
 #include <iostream>
 #include "../headers files/Shader.h"
 
-
-Shader::~Shader() {
-    glDeleteProgram(programID);
-}
-
 void Shader::loadShader(const std::string &path, GLenum shaderType) {
     char infoLog[1024];
     GLint success;
@@ -75,4 +70,8 @@ void Shader::bindProgram() const {
 void Shader::update(const Camera& camera) {
     glm::mat4 projection = camera.getViewProjection();
     glUniformMatrix4fv(uniforms[PROJECTION_U], 1, GL_FALSE, &projection[0][0]);
+}
+
+Shader::~Shader() {
+    glDeleteProgram(programID);
 }

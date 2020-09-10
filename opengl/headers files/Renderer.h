@@ -23,17 +23,7 @@ public:
     Entity* entites;
     Shader* shader;
 
-    void createVao(int index);
-    void bindVao() const;
-
-    void createVbo(int index);
-    void bindVbo(int vboIndex) const;
-
-    void createEbo(int index);
-    void bindEbo() const;
-
     void render();
-    void createRenderModel();
 
     Renderer(Shader* shader, Entity* entities);
 };

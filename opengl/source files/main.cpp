@@ -18,7 +18,7 @@ GLuint indices[] = {
         0, 1, 2
 };
 
-Mesh mesh(vertices, indices, sizeof(vertices) / sizeof(vertices[0]));
+Mesh mesh(vertices, indices, sizeof(vertices) / sizeof(vertices[0]), sizeof(indices) / sizeof(indices[0]));
 Transform entityTransform;
 Entity entity(mesh, entityTransform);
 Shader shader = Shader();
@@ -59,13 +59,14 @@ void init() {
     shader.loadShader("../resource files/vertex.glsl", GL_VERTEX_SHADER);
     shader.loadShader("../resource files/fragment.glsl", GL_FRAGMENT_SHADER);
 
-    renderer.createRenderModel();
+    mesh.init();
 }
 
 void update() {
     entity.transform.getPos().z = sinf(counter * 50);
-    camera.pos.y = sinf(counter);
     shader.update(camera);
+
+    camera.updateInput();
 
     counter += 0.01f;
 
