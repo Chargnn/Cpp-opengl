@@ -29,14 +29,14 @@ public:
 
     glm::mat4 perspective;
     glm::vec3 pos;
-    glm::vec3 rot;
     glm::vec3 front;
     glm::vec3 up;
 
     float yaw = -90.0f;
     float pitch;
 
-    void updateInput();
+    void updateInput(float);
+    void updatePerspective(float fov, float aspect, float zNear = 0.001f, float zFar = 1000.0f);
 };
 
 #endif //OPENGL_CAMERA_H

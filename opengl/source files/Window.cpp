@@ -8,8 +8,12 @@
 Window* Window::instance = nullptr;
 GLFWwindow* Window::windowID = nullptr;
 
-Window::Window() {
+int Window::width = 640;
+int Window::height = 480;
 
+bool Window::lockedCursor = false;
+
+Window::Window() {
 
     glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
     glfwWindowHint(GLFW_VISIBLE, GLFW_TRUE);
@@ -18,9 +22,8 @@ Window::Window() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
-    windowID = glfwCreateWindow(640, 480, "Title", NULL, NULL);
+    windowID = glfwCreateWindow(Window::width, Window::height, "Title", NULL, NULL);
 
-    glfwSetFramebufferSizeCallback(windowID, resizeWindowCallback);
     glfwMakeContextCurrent(windowID);
 
     glewExperimental = GL_TRUE;
@@ -44,6 +47,12 @@ Window* Window::getInstance() {
     return instance;
 }
 
-void Window::resizeWindowCallback(GLFWwindow* window, int fbw, int fbh) {
-    glViewport(0, 0, fbw, fbh);
+void Window::cursorFocus() {
+    glfwSetInputMode(Window::windowID, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    Window::lockedCursor = true;
+}
+
+void Window::cursorUnfocus() {
+    glfwSetInputMode(Window::windowID, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    Window::lockedCursor = false;
 }

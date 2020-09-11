@@ -6,15 +6,17 @@
 #include <string>
 
 class Window {
-private:
-    static Window* instance;
-
-    explicit Window();
 public:
     static GLFWwindow* windowID;
+    static Window* instance;
+    static int width, height;
+    static bool lockedCursor;
 
     static Window* getInstance();
-    static void resizeWindowCallback(GLFWwindow* window, int fbw, int fbH);
+    static void cursorFocus();
+    static void cursorUnfocus();
+private:
+    explicit Window();
 };
 
 
