@@ -20,12 +20,12 @@ public:
     GLuint vaoID = 0;
     GLuint vboIDs[NUM_BUFFERS];
     GLuint eboID = 0;
-    Entity* entites;
+    std::vector<Entity>* entities;
     Shader* shader;
 
     void render();
 
-    Renderer(Shader* shader, Entity* entities);
+    Renderer(Shader* shader, std::vector<Entity>* entities);
 };
 
 

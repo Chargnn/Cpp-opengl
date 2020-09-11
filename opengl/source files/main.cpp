@@ -21,8 +21,11 @@ GLuint indices[] = {
 Mesh mesh(vertices, indices, sizeof(vertices) / sizeof(vertices[0]), sizeof(indices) / sizeof(indices[0]));
 Transform entityTransform;
 Entity entity(mesh, entityTransform);
+
+std::vector<Entity> entities;
+
 Shader shader = Shader();
-Renderer renderer = Renderer(&shader, &entity);
+Renderer* renderer;
 Camera camera(glm::vec3(0, 0, 0), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 1000.0f);
 
 float counter = 0.f;
@@ -49,9 +52,9 @@ int main() {
     double lastTime2 = glfwGetTime();
     int nbFrames = 0;
     int fps = 0;
-    float deltaTime = 0.0f;    // Time between current frame and last frame
-    float deltaTime2 = 0.0f;    // Time between current frame and last frame
-    float updateTimer = 0;
+    double deltaTime;
+    double deltaTime2;
+    double updateTimer = 0;
     while (!glfwWindowShouldClose(Window::windowID)) {
 
         // Measure speed
@@ -68,7 +71,7 @@ int main() {
 
             shader.bindProgram();
             render();
-            update(deltaTime);
+            update((float) deltaTime);
             shader.unbindProgram();
         }
 
@@ -86,6 +89,10 @@ int main() {
 }
 
 void init() {
+    entities.push_back(entity);
+
+    renderer = new Renderer(&shader, &entities);
+
     shader.loadShader("../resource files/vertex.glsl", GL_VERTEX_SHADER);
     shader.loadShader("../resource files/fragment.glsl", GL_FRAGMENT_SHADER);
 
@@ -112,7 +119,7 @@ void render() {
     glClearColor(1.f, 0.f, 0.f, 1.f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
-    renderer.render();
+    renderer->render();
 }
 
 bool firstMouse = true;
