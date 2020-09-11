@@ -46,27 +46,39 @@ int main() {
     init();
 
     double lastTime = glfwGetTime();
+    double lastTime2 = glfwGetTime();
     int nbFrames = 0;
+    int fps = 0;
     float deltaTime = 0.0f;    // Time between current frame and last frame
+    float deltaTime2 = 0.0f;    // Time between current frame and last frame
+    float updateTimer = 0;
     while (!glfwWindowShouldClose(Window::windowID)) {
 
         // Measure speed
         double currentTime = glfwGetTime();
         nbFrames++;
         deltaTime = currentTime - lastTime;
-        if (deltaTime >= 1.0) { // If last prinf() was more than 1 sec ago
-            // printf and reset timer
-            printf("%f ms/frame\n", 1000.0 / double(nbFrames));
-            nbFrames = 0;
-            lastTime += 1.0;
+        deltaTime2 = currentTime - lastTime2;
+        lastTime2 = currentTime;
+        updateTimer += deltaTime2;
+
+        if (updateTimer >= 1.0 / 60.0) {
+            fps++;
+            glfwPollEvents();
+
+            shader.bindProgram();
+            render();
+            update(deltaTime);
+            shader.unbindProgram();
         }
 
-        glfwPollEvents();
-
-        shader.bindProgram();
-        render();
-        update(deltaTime);
-        shader.unbindProgram();
+        if (deltaTime >= 1.0) {
+            printf("%f ms/frame\n", 1000.0 / double(nbFrames));
+            printf("%d fps\n", fps);
+            nbFrames = 0;
+            fps = 0;
+            lastTime += 1.0;
+        }
     }
 
     glfwTerminate();
