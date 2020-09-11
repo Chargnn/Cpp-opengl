@@ -14,7 +14,7 @@ class Shader {
 public:
     void loadShader(const std::string &path, GLenum shaderType);
 
-    void update(const Camera& camera);
+    void update(Camera& camera);
 
     void bindProgram() const;
 

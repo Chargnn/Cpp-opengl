@@ -67,7 +67,7 @@ void Shader::bindProgram() const {
     glUseProgram(programID);
 }
 
-void Shader::update(const Camera& camera) {
+void Shader::update(Camera& camera) {
     glm::mat4 projection = camera.getViewProjection();
     glUniformMatrix4fv(uniforms[PROJECTION_U], 1, GL_FALSE, &projection[0][0]);
 }
