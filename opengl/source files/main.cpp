@@ -5,20 +5,8 @@
 #include "../headers files/Shader.h"
 #include "../headers files/Mesh.h"
 #include "../headers files/Renderer.h"
-#include "../headers files/Camera.h"
-#include "../headers files/Entity.h"
 
-Vertex vertices[] = {
-        glm::vec3(0.0f, 0.5f, 0.0f),
-        glm::vec3(-0.5f, -0.5f, 0.0f),
-        glm::vec3(0.5f, -0.5f, 0.0f),
-};
-
-GLuint indices[] = {
-        0, 1, 2
-};
-
-Mesh mesh(vertices, indices, sizeof(vertices) / sizeof(vertices[0]), sizeof(indices) / sizeof(indices[0]));
+Mesh mesh = Mesh();
 Transform entityTransform;
 Entity entity(mesh, entityTransform);
 
@@ -26,7 +14,7 @@ std::vector<Entity> entities;
 
 Shader shader = Shader();
 Renderer* renderer;
-Camera camera(glm::vec3(0, 0, 0), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 1000.0f);
+Camera camera(glm::vec3(450, 130, -2450), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 1000.0f);
 
 float counter = 0.f;
 
@@ -71,7 +59,7 @@ int main() {
 
             shader.bindProgram();
             render();
-            update((float) deltaTime);
+            update(1);
             shader.unbindProgram();
         }
 
@@ -89,6 +77,7 @@ int main() {
 }
 
 void init() {
+    mesh.init();
     entities.push_back(entity);
 
     renderer = new Renderer(&shader, &entities);
@@ -100,11 +89,9 @@ void init() {
     glfwSetCursorPosCallback(Window::windowID, mouse_callback);
     Window::cursorFocus();
 
-    mesh.init();
 }
 
 void update(float delta) {
-    entity.transform.getPos().z = sinf(counter * 50);
     shader.update(camera);
 
     camera.updateInput(delta);

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/acoulombe/code/opengl/headers files/Mesh.h
+glm/common.hpp
+-
+vector
+-
+GL/glew.h
+-
+
+/home/acoulombe/code/opengl/headers files/OBJLoader.h
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+math.h
+-
+
+/home/acoulombe/code/opengl/source files/Mesh.cpp
+../headers files/Mesh.h
+/home/acoulombe/code/opengl/headers files/Mesh.h
+../headers files/OBJLoader.h
+/home/acoulombe/code/opengl/headers files/OBJLoader.h
+

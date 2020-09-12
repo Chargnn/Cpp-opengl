@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="opengl"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opengl">
+				<Option output="/home/acoulombe/code/opengl/cmake-build-debug/opengl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 opengl"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opengl/fast">
+				<Option output="/home/acoulombe/code/opengl/cmake-build-debug/opengl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 opengl/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/acoulombe/code/opengl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Camera.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Entity.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Mesh.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/OBJLoader.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Renderer.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Shader.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Transform.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Window.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/obj_loader.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/obj_loader.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Camera.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Mesh.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Renderer.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Shader.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Window.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/main.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

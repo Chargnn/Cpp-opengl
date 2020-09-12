@@ -10,28 +10,19 @@
 #include <vector>
 #include <GL/glew.h>
 
-class Vertex
-{
-public:
-    Vertex(const glm::vec3& vec3)
-    {
-        this->vec3 = vec3;
-    }
-private:
-    glm::vec3 vec3;
-};
-
 class Mesh {
 public:
-    Vertex* vertices;
-    GLuint* indices;
+    std::vector<glm::vec3> vertices;
+    std::vector<GLuint> indices;
+    glm::vec3* normals;
+    glm::vec3* uvs;
     unsigned int numVertices;
 
     GLuint vaoID = 0;
     GLuint vboIDs[1];
     GLuint eboID = 0;
 
-    Mesh(Vertex* vertices, GLuint* indices, unsigned int numVertices, unsigned int numIndices);
+    Mesh();
     void init();
 
     unsigned int numIndices;
