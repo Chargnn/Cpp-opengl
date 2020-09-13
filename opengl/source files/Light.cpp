@@ -4,8 +4,9 @@
 
 #include "../headers files/Light.h"
 
-Light::Light(glm::vec3 pos, glm::vec3 color) {
+Light::Light(glm::vec3 pos, glm::vec3 color, glm::vec3 attenuation) {
     this->pos = pos;
     this->color = color;
+    this->attenuation = attenuation;
 }
 

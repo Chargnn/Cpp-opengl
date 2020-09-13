@@ -11,8 +11,9 @@ class Light {
 public:
     glm::vec3 pos{};
     glm::vec3 color{};
+    glm::vec3 attenuation{};
 
-    Light(glm::vec3 pos, glm::vec3 color);
+    Light(glm::vec3 pos, glm::vec3 color, glm::vec3 attenuation = glm::vec3(1.0, 0.0, 0.0));
 
     ~Light() = default;
 

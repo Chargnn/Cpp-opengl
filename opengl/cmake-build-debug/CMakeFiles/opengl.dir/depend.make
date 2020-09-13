@@ -17,6 +17,7 @@ CMakeFiles/opengl.dir/source_files/Mesh.cpp.o: ../headers\ files/Mesh.h
 CMakeFiles/opengl.dir/source_files/Mesh.cpp.o: ../headers\ files/OBJLoader.h
 CMakeFiles/opengl.dir/source_files/Mesh.cpp.o: ../source\ files/Mesh.cpp
 
+CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../vendor/glfw/include/GLFW/glfw3.h
 CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../headers\ files/Camera.h
 CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../headers\ files/Entity.h
 CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../headers\ files/Light.h
@@ -27,6 +28,7 @@ CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../headers\ files/Transform.h
 CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../headers\ files/Window.h
 CMakeFiles/opengl.dir/source_files/Renderer.cpp.o: ../source\ files/Renderer.cpp
 
+CMakeFiles/opengl.dir/source_files/Shader.cpp.o: ../vendor/glfw/include/GLFW/glfw3.h
 CMakeFiles/opengl.dir/source_files/Shader.cpp.o: ../headers\ files/Camera.h
 CMakeFiles/opengl.dir/source_files/Shader.cpp.o: ../headers\ files/Light.h
 CMakeFiles/opengl.dir/source_files/Shader.cpp.o: ../headers\ files/Shader.h
@@ -37,6 +39,7 @@ CMakeFiles/opengl.dir/source_files/Shader.cpp.o: ../source\ files/Shader.cpp
 CMakeFiles/opengl.dir/source_files/Window.cpp.o: ../headers\ files/Window.h
 CMakeFiles/opengl.dir/source_files/Window.cpp.o: ../source\ files/Window.cpp
 
+CMakeFiles/opengl.dir/source_files/main.cpp.o: ../vendor/glfw/include/GLFW/glfw3.h
 CMakeFiles/opengl.dir/source_files/main.cpp.o: ../headers\ files/Camera.h
 CMakeFiles/opengl.dir/source_files/main.cpp.o: ../headers\ files/Entity.h
 CMakeFiles/opengl.dir/source_files/main.cpp.o: ../headers\ files/Light.h

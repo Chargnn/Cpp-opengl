@@ -22,6 +22,7 @@ public:
 
         LIGHT_POSITION_U,
         LIGHT_COLOR_U,
+        LIGHT_ATTENUATION_U,
 
         NUM_UNIFORMS
     };

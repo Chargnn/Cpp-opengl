@@ -58,6 +58,7 @@ void Shader::loadShader(const std::string &path, GLenum shaderType) {
 
     uniforms[LIGHT_POSITION_U] = glGetUniformLocation(programID, "lightPosition");
     uniforms[LIGHT_COLOR_U] = glGetUniformLocation(programID, "lightColor");
+    uniforms[LIGHT_ATTENUATION_U] = glGetUniformLocation(programID, "lightAttenuation");
 
     unbindProgram();
     glDeleteShader(shader);
@@ -82,6 +83,7 @@ void Shader::update(Camera* camera) {
     for (Light const &light: *lights) {
         glUniform3fv(uniforms[LIGHT_POSITION_U], 1, &light.pos[0]);
         glUniform3fv(uniforms[LIGHT_COLOR_U], 1, &light.color[0]);
+        glUniform3fv(uniforms[LIGHT_ATTENUATION_U], 1, &light.attenuation[0]);
     }
 }
 

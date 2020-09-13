@@ -73,12 +73,10 @@ int main() {
 }
 
 void init() {
-    std::cout << glfwGetVersionString();
-
     shader = new Shader();
     camera = new Camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
 
-    Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1));
+    Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1), glm::vec3(1,0.00001,0.00001));
     lights.push_back(light);
     shader->addLights(&lights);
 
@@ -86,8 +84,6 @@ void init() {
         Mesh *mesh = new Mesh();
         mesh->init();
         Entity entity(mesh);
-        entity.transform.pos.y += i * 10.0f;
-        entity.transform.pos.x += i * 10.0f;
         entities.push_back(entity);
     }
 
