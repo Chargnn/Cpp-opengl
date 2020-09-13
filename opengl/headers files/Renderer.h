@@ -13,13 +13,6 @@
 
 class Renderer {
 public:
-    enum {
-        NUM_BUFFERS
-    };
-
-    GLuint vaoID = 0;
-    GLuint vboIDs[NUM_BUFFERS];
-    GLuint eboID = 0;
     std::vector<Entity>* entities;
     Shader* shader;
 

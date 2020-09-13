@@ -4,4 +4,7 @@
 
 #include "../headers files/Entity.h"
 
-Entity::Entity(Mesh &mesh, Transform &transform) : mesh(mesh), transform(transform) {}
+Entity::Entity(Mesh *mesh) {
+    this->mesh = mesh;
+    this->transform = Transform();
+}

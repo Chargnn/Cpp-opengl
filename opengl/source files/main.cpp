@@ -6,18 +6,12 @@
 #include "../headers files/Mesh.h"
 #include "../headers files/Renderer.h"
 
-Mesh mesh = Mesh();
-Transform entityTransform;
-Entity entity(mesh, entityTransform);
-Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1));
 std::vector<Entity> entities;
 std::vector<Light> lights;
 
-Shader shader = Shader();
-Renderer* renderer;
-Camera camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
-
-float counter = 0.f;
+Shader *shader;
+Renderer *renderer;
+Camera *camera;
 
 void init();
 
@@ -53,15 +47,16 @@ int main() {
         deltaTime2 = currentTime - lastTime2;
         lastTime2 = currentTime;
         updateTimer += deltaTime2;
-
+        glfwPollEvents();
         if (updateTimer >= 1.0 / 60.0) {
             fps++;
-            glfwPollEvents();
 
-            shader.bindProgram();
+            shader->bindProgram();
             render();
             update(4);
-            shader.unbindProgram();
+            shader->unbindProgram();
+
+            glfwSwapBuffers(Window::windowID);
         }
 
         if (deltaTime >= 1.0) {
@@ -78,16 +73,26 @@ int main() {
 }
 
 void init() {
+    shader = new Shader();
+    camera = new Camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
+
+    Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1));
     lights.push_back(light);
-    shader.addLights(lights);
+    shader->addLights(&lights);
 
-    mesh.init();
-    entities.push_back(entity);
+    for(int i = 0; i < 1; i++){
+        Mesh *mesh = new Mesh();
+        mesh->init();
+        Entity entity(mesh);
+        entity.transform.pos.y += i * 10.0f;
+        entity.transform.pos.x += i * 10.0f;
+        entities.push_back(entity);
+    }
 
-    renderer = new Renderer(&shader, &entities);
+    renderer = new Renderer(shader, &entities);
 
-    shader.loadShader("../resource files/vertex.glsl", GL_VERTEX_SHADER);
-    shader.loadShader("../resource files/fragment.glsl", GL_FRAGMENT_SHADER);
+    shader->loadShader("../resource files/vertex.glsl", GL_VERTEX_SHADER);
+    shader->loadShader("../resource files/fragment.glsl", GL_FRAGMENT_SHADER);
 
     glfwSetFramebufferSizeCallback(Window::windowID, resizeWindowCallback);
     glfwSetCursorPosCallback(Window::windowID, mouse_callback);
@@ -96,13 +101,10 @@ void init() {
 }
 
 void update(float delta) {
-    shader.update(camera);
+    shader->update(camera);
 
-    camera.updateInput(delta);
+    camera->updateInput(delta);
 
-    counter += 0.01f;
-
-    glfwSwapBuffers(Window::windowID);
     glFlush();
 }
 
@@ -118,7 +120,7 @@ double lastX = 0, lastY = 0;
 
 void mouse_callback(GLFWwindow *window, double xpos, double ypos) {
     if(Window::lockedCursor) {
-        camera.updateMouseInput(firstMouse, lastX, lastY, xpos, ypos);
+        camera->updateMouseInput(firstMouse, lastX, lastY, xpos, ypos);
     }
 }
 
@@ -127,5 +129,5 @@ void resizeWindowCallback(GLFWwindow* window, int fbw, int fbh) {
     Window::height = fbh;
 
     glViewport(0, 0, Window::width, Window::height);
-    camera.updatePerspective(70.0f, (float) Window::width / (float) Window::height);
+    camera->updatePerspective(70.0f, (float) Window::width / (float) Window::height);
 }

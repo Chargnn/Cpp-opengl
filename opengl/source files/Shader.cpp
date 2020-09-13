@@ -71,13 +71,15 @@ void Shader::bindProgram() const {
     glUseProgram(programID);
 }
 
-void Shader::update(Camera& camera) {
-    glm::mat4 view = camera.getView();
-    glm::mat4 projection = camera.getProjection();
+void Shader::update(Camera* camera) {
+    glm::mat4 view = camera->getView();
+    glm::mat4 projection = camera->getProjection();
     glUniformMatrix4fv(uniforms[VIEW_U], 1, GL_FALSE, &view[0][0]);
     glUniformMatrix4fv(uniforms[PROJECTION_U], 1, GL_FALSE, &projection[0][0]);
 
-    for (Light const &light: this->lights) {
+    lights->at(0).pos = camera->pos;
+
+    for (Light const &light: *lights) {
         glUniform3fv(uniforms[LIGHT_POSITION_U], 1, &light.pos[0]);
         glUniform3fv(uniforms[LIGHT_COLOR_U], 1, &light.color[0]);
     }
@@ -87,6 +89,6 @@ Shader::~Shader() {
     glDeleteProgram(programID);
 }
 
-void Shader::addLights(std::vector<Light> lights) {
+void Shader::addLights(std::vector<Light> *lights) {
     this->lights = lights;
 }

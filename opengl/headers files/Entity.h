@@ -11,10 +11,10 @@
 
 class Entity {
 public:
-    Mesh& mesh;
-    Transform& transform;
+    Mesh *mesh;
+    Transform transform;
 
-    Entity(Mesh &mesh, Transform& transform);
+    Entity(Mesh *mesh);
     ~Entity() = default;
 };
 

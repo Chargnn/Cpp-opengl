@@ -12,6 +12,10 @@
 
 class Transform {
 public:
+    glm::vec3 pos;
+    glm::vec3 rot;
+    glm::vec3 scale;
+
     Transform(const glm::vec3 &pos = glm::vec3(), const glm::vec3 &rot = glm::vec3(), const glm::vec3 &scale = glm::vec3(1)) : pos(pos), rot(rot), scale(scale) {}
 
     inline glm::mat4 getModel() const {
@@ -25,11 +29,6 @@ public:
 
         return posMatrix * rotMatrix * scaleMatrix;
     }
-
-private:
-    glm::vec3 pos;
-    glm::vec3 rot;
-    glm::vec3 scale;
 };
 
 

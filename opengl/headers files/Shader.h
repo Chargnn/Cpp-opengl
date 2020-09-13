@@ -28,13 +28,13 @@ public:
 
     GLuint programID;
     GLuint uniforms[NUM_UNIFORMS];
-    std::vector<Light> lights;
+    std::vector<Light> *lights;
 
     void loadShader(const std::string &path, GLenum shaderType);
 
-    void update(Camera &camera);
+    void update(Camera *camera);
 
-    void addLights(std::vector<Light> lights);
+    void addLights(std::vector<Light> *lights);
 
     void bindProgram() const;
 
