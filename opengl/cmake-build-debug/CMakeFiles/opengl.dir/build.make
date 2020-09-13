@@ -204,6 +204,9 @@ opengl: CMakeFiles/opengl.dir/source_files/Camera.cpp.o
 opengl: CMakeFiles/opengl.dir/source_files/Light.cpp.o
 opengl: CMakeFiles/opengl.dir/source_files/Entity.cpp.o
 opengl: CMakeFiles/opengl.dir/build.make
+opengl: vendor/glfw/src/src/libglfw3.a
+opengl: /usr/lib/x86_64-linux-gnu/librt.so
+opengl: /usr/lib/x86_64-linux-gnu/libm.so
 opengl: CMakeFiles/opengl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable opengl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opengl.dir/link.txt --verbose=$(VERBOSE)

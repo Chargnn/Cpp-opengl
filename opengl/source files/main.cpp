@@ -73,6 +73,8 @@ int main() {
 }
 
 void init() {
+    std::cout << glfwGetVersionString();
+
     shader = new Shader();
     camera = new Camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
 
