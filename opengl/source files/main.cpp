@@ -91,7 +91,7 @@ void init() {
 
     glfwSetFramebufferSizeCallback(Window::windowID, resizeWindowCallback);
     glfwSetCursorPosCallback(Window::windowID, mouse_callback);
-    Window::cursorFocus();
+    Window::focusCursor(true);
 
 }
 

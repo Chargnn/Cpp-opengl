@@ -15,19 +15,26 @@ public:
     std::vector<glm::vec3> vertices;
     std::vector<GLuint> indices;
     std::vector<glm::vec3> normals;
-    glm::vec3* uvs;
-    unsigned int numVertices;
 
-    GLuint vaoID = 0;
-    GLuint vboIDs[1];
-    GLuint eboID = 0;
+    enum {
+        VBO_POSITION,
+        VBO_NORMAL,
+
+        NUM_VBO
+    };
+
+    GLuint vaoID;
+    GLuint vboIDs[NUM_VBO];
+    GLuint eboID;
 
     Mesh();
+
     void init();
 
-    unsigned int numIndices;
-
     ~Mesh();
+
+private:
+    void addToVbo(int index, std::vector<glm::vec3> data);
 };
 
 

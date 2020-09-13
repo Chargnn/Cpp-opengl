@@ -56,8 +56,8 @@ void Shader::loadShader(const std::string &path, GLenum shaderType) {
     uniforms[TRANSFORM_U] = glGetUniformLocation(programID, "transform");
     uniforms[PROJECTION_U] = glGetUniformLocation(programID, "projection");
 
-    uniforms[LIGHTPOSITION_U] = glGetUniformLocation(programID, "lightPosition");
-    uniforms[LIGHTCOLOR_U] = glGetUniformLocation(programID, "lightColor");
+    uniforms[LIGHT_POSITION_U] = glGetUniformLocation(programID, "lightPosition");
+    uniforms[LIGHT_COLOR_U] = glGetUniformLocation(programID, "lightColor");
 
     unbindProgram();
     glDeleteShader(shader);
@@ -77,18 +77,14 @@ void Shader::update(Camera& camera) {
     glUniformMatrix4fv(uniforms[VIEW_U], 1, GL_FALSE, &view[0][0]);
     glUniformMatrix4fv(uniforms[PROJECTION_U], 1, GL_FALSE, &projection[0][0]);
 
-    for (auto const &light: this->lights) {
-        glUniform3fv(uniforms[LIGHTPOSITION_U], 1, &light.pos[0]);
-        glUniform3fv(uniforms[LIGHTCOLOR_U], 1, &light.color[0]);
+    for (Light const &light: this->lights) {
+        glUniform3fv(uniforms[LIGHT_POSITION_U], 1, &light.pos[0]);
+        glUniform3fv(uniforms[LIGHT_COLOR_U], 1, &light.color[0]);
     }
 }
 
 Shader::~Shader() {
     glDeleteProgram(programID);
-}
-
-Shader::Shader() {
-
 }
 
 void Shader::addLights(std::vector<Light> lights) {

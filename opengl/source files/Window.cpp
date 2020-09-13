@@ -5,8 +5,8 @@
 #include <iostream>
 #include "../headers files/Window.h"
 
-Window* Window::instance = nullptr;
-GLFWwindow* Window::windowID = nullptr;
+Window *Window::instance = nullptr;
+GLFWwindow *Window::windowID = nullptr;
 
 int Window::width = 640;
 int Window::height = 480;
@@ -27,8 +27,7 @@ Window::Window() {
     glfwMakeContextCurrent(windowID);
 
     glewExperimental = GL_TRUE;
-    if(glewInit() != GLEW_OK)
-    {
+    if (glewInit() != GLEW_OK) {
         std::cerr << "ERROR INIT GLEW" << std::endl;
     }
 
@@ -38,21 +37,15 @@ Window::Window() {
     glFrontFace(GL_CCW);
 }
 
-Window* Window::getInstance() {
-    if (instance == nullptr)
-    {
+Window *Window::getInstance() {
+    if (instance == nullptr) {
         instance = new Window();
     }
 
     return instance;
 }
 
-void Window::cursorFocus() {
-    glfwSetInputMode(Window::windowID, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    Window::lockedCursor = true;
-}
-
-void Window::cursorUnfocus() {
-    glfwSetInputMode(Window::windowID, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-    Window::lockedCursor = false;
+void Window::focusCursor(bool focus) {
+    glfwSetInputMode(Window::windowID, GLFW_CURSOR, focus ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
+    Window::lockedCursor = focus;
 }

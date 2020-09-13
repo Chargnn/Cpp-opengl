@@ -23,7 +23,7 @@ public:
     std::vector<Entity>* entities;
     Shader* shader;
 
-    void render();
+    void render() const;
 
     Renderer(Shader* shader, std::vector<Entity>* entities);
 };

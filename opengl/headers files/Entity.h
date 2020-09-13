@@ -14,10 +14,8 @@ public:
     Mesh& mesh;
     Transform& transform;
 
-    Entity(Mesh &mesh, Transform& transform) : mesh(mesh), transform(transform)
-    {
-
-    }
+    Entity(Mesh &mesh, Transform& transform);
+    ~Entity() = default;
 };
 
 

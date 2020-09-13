@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/opengl.dir/source_files/Camera.cpp.o"
+  "CMakeFiles/opengl.dir/source_files/Entity.cpp.o"
   "CMakeFiles/opengl.dir/source_files/Light.cpp.o"
   "CMakeFiles/opengl.dir/source_files/Mesh.cpp.o"
   "CMakeFiles/opengl.dir/source_files/Renderer.cpp.o"
   "CMakeFiles/opengl.dir/source_files/Shader.cpp.o"
   "CMakeFiles/opengl.dir/source_files/Window.cpp.o"
   "CMakeFiles/opengl.dir/source_files/main.cpp.o"
-  "CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o"
   "opengl"
   "opengl.pdb"
 )

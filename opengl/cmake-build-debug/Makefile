@@ -170,6 +170,33 @@ source_files/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Camera.cpp.s
 .PHONY : source_files/Camera.cpp.s
 
+source_files/Entity.o: source_files/Entity.cpp.o
+
+.PHONY : source_files/Entity.o
+
+# target to build an object file
+source_files/Entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Entity.cpp.o
+.PHONY : source_files/Entity.cpp.o
+
+source_files/Entity.i: source_files/Entity.cpp.i
+
+.PHONY : source_files/Entity.i
+
+# target to preprocess a source file
+source_files/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Entity.cpp.i
+.PHONY : source_files/Entity.cpp.i
+
+source_files/Entity.s: source_files/Entity.cpp.s
+
+.PHONY : source_files/Entity.s
+
+# target to generate assembly for a file
+source_files/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Entity.cpp.s
+.PHONY : source_files/Entity.cpp.s
+
 source_files/Light.o: source_files/Light.cpp.o
 
 .PHONY : source_files/Light.o
@@ -332,33 +359,6 @@ source_files/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/main.cpp.s
 .PHONY : source_files/main.cpp.s
 
-source_files/obj_loader.o: source_files/obj_loader.cpp.o
-
-.PHONY : source_files/obj_loader.o
-
-# target to build an object file
-source_files/obj_loader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o
-.PHONY : source_files/obj_loader.cpp.o
-
-source_files/obj_loader.i: source_files/obj_loader.cpp.i
-
-.PHONY : source_files/obj_loader.i
-
-# target to preprocess a source file
-source_files/obj_loader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.i
-.PHONY : source_files/obj_loader.cpp.i
-
-source_files/obj_loader.s: source_files/obj_loader.cpp.s
-
-.PHONY : source_files/obj_loader.s
-
-# target to generate assembly for a file
-source_files/obj_loader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.s
-.PHONY : source_files/obj_loader.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -371,6 +371,9 @@ help:
 	@echo "... source_files/Camera.o"
 	@echo "... source_files/Camera.i"
 	@echo "... source_files/Camera.s"
+	@echo "... source_files/Entity.o"
+	@echo "... source_files/Entity.i"
+	@echo "... source_files/Entity.s"
 	@echo "... source_files/Light.o"
 	@echo "... source_files/Light.i"
 	@echo "... source_files/Light.s"
@@ -389,9 +392,6 @@ help:
 	@echo "... source_files/main.o"
 	@echo "... source_files/main.i"
 	@echo "... source_files/main.s"
-	@echo "... source_files/obj_loader.o"
-	@echo "... source_files/obj_loader.i"
-	@echo "... source_files/obj_loader.s"
 .PHONY : help
 
 

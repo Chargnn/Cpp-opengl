@@ -7,14 +7,15 @@
 
 class Window {
 public:
-    static GLFWwindow* windowID;
-    static Window* instance;
+    static GLFWwindow *windowID;
+    static Window *instance;
     static int width, height;
     static bool lockedCursor;
 
-    static Window* getInstance();
-    static void cursorFocus();
-    static void cursorUnfocus();
+    static Window *getInstance();
+
+    static void focusCursor(bool focus);
+
 private:
     explicit Window();
 };

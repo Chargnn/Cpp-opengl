@@ -111,10 +111,10 @@
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Window.h">
 			<Option target="opengl"/>
 		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/headers files/obj_loader.h">
+		<Unit filename="/home/acoulombe/code/opengl/source files/Camera.cpp">
 			<Option target="opengl"/>
 		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/source files/Camera.cpp">
+		<Unit filename="/home/acoulombe/code/opengl/source files/Entity.cpp">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/source files/Light.cpp">
@@ -133,9 +133,6 @@
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/source files/main.cpp">
-			<Option target="opengl"/>
-		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/source files/obj_loader.cpp">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/CMakeLists.txt">
