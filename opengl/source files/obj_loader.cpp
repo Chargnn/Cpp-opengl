@@ -2,7 +2,7 @@
 // Created by acoulombe on 9/12/20.
 //
 
-#include "obj_loader.h"
+#include "../headers files/obj_loader.h"
 #include <fstream>
 #include <iostream>
 #include <algorithm>

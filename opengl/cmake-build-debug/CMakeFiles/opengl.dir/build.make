@@ -155,31 +155,31 @@ CMakeFiles/opengl.dir/source_files/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/source_files/Camera.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/acoulombe/code/opengl/source files/Camera.cpp" -o CMakeFiles/opengl.dir/source_files/Camera.cpp.s
 
-CMakeFiles/opengl.dir/obj_loader.cpp.o: CMakeFiles/opengl.dir/flags.make
-CMakeFiles/opengl.dir/obj_loader.cpp.o: ../obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/opengl.dir/obj_loader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl.dir/obj_loader.cpp.o -c /home/acoulombe/code/opengl/obj_loader.cpp
+CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o: CMakeFiles/opengl.dir/flags.make
+CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o: ../source\ files/obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o -c "/home/acoulombe/code/opengl/source files/obj_loader.cpp"
 
-CMakeFiles/opengl.dir/obj_loader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl.dir/obj_loader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acoulombe/code/opengl/obj_loader.cpp > CMakeFiles/opengl.dir/obj_loader.cpp.i
+CMakeFiles/opengl.dir/source_files/obj_loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl.dir/source_files/obj_loader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/acoulombe/code/opengl/source files/obj_loader.cpp" > CMakeFiles/opengl.dir/source_files/obj_loader.cpp.i
 
-CMakeFiles/opengl.dir/obj_loader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/obj_loader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acoulombe/code/opengl/obj_loader.cpp -o CMakeFiles/opengl.dir/obj_loader.cpp.s
+CMakeFiles/opengl.dir/source_files/obj_loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/source_files/obj_loader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/acoulombe/code/opengl/source files/obj_loader.cpp" -o CMakeFiles/opengl.dir/source_files/obj_loader.cpp.s
 
-CMakeFiles/opengl.dir/Light.cpp.o: CMakeFiles/opengl.dir/flags.make
-CMakeFiles/opengl.dir/Light.cpp.o: ../Light.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opengl.dir/Light.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl.dir/Light.cpp.o -c /home/acoulombe/code/opengl/Light.cpp
+CMakeFiles/opengl.dir/source_files/Light.cpp.o: CMakeFiles/opengl.dir/flags.make
+CMakeFiles/opengl.dir/source_files/Light.cpp.o: ../source\ files/Light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opengl.dir/source_files/Light.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl.dir/source_files/Light.cpp.o -c "/home/acoulombe/code/opengl/source files/Light.cpp"
 
-CMakeFiles/opengl.dir/Light.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl.dir/Light.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acoulombe/code/opengl/Light.cpp > CMakeFiles/opengl.dir/Light.cpp.i
+CMakeFiles/opengl.dir/source_files/Light.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl.dir/source_files/Light.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/acoulombe/code/opengl/source files/Light.cpp" > CMakeFiles/opengl.dir/source_files/Light.cpp.i
 
-CMakeFiles/opengl.dir/Light.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/Light.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acoulombe/code/opengl/Light.cpp -o CMakeFiles/opengl.dir/Light.cpp.s
+CMakeFiles/opengl.dir/source_files/Light.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl.dir/source_files/Light.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/acoulombe/code/opengl/source files/Light.cpp" -o CMakeFiles/opengl.dir/source_files/Light.cpp.s
 
 # Object files for target opengl
 opengl_OBJECTS = \
@@ -189,8 +189,8 @@ opengl_OBJECTS = \
 "CMakeFiles/opengl.dir/source_files/Renderer.cpp.o" \
 "CMakeFiles/opengl.dir/source_files/Mesh.cpp.o" \
 "CMakeFiles/opengl.dir/source_files/Camera.cpp.o" \
-"CMakeFiles/opengl.dir/obj_loader.cpp.o" \
-"CMakeFiles/opengl.dir/Light.cpp.o"
+"CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o" \
+"CMakeFiles/opengl.dir/source_files/Light.cpp.o"
 
 # External object files for target opengl
 opengl_EXTERNAL_OBJECTS =
@@ -201,8 +201,8 @@ opengl: CMakeFiles/opengl.dir/source_files/Shader.cpp.o
 opengl: CMakeFiles/opengl.dir/source_files/Renderer.cpp.o
 opengl: CMakeFiles/opengl.dir/source_files/Mesh.cpp.o
 opengl: CMakeFiles/opengl.dir/source_files/Camera.cpp.o
-opengl: CMakeFiles/opengl.dir/obj_loader.cpp.o
-opengl: CMakeFiles/opengl.dir/Light.cpp.o
+opengl: CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o
+opengl: CMakeFiles/opengl.dir/source_files/Light.cpp.o
 opengl: CMakeFiles/opengl.dir/build.make
 opengl: CMakeFiles/opengl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable opengl"

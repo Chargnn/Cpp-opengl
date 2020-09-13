@@ -10,7 +10,7 @@
 #include <GL/glew.h>
 #include "Transform.h"
 #include "Camera.h"
-#include "../Light.h"
+#include "Light.h"
 
 class Shader {
 public:

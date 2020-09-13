@@ -143,60 +143,6 @@ opengl/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/build
 .PHONY : opengl/fast
 
-Light.o: Light.cpp.o
-
-.PHONY : Light.o
-
-# target to build an object file
-Light.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.o
-.PHONY : Light.cpp.o
-
-Light.i: Light.cpp.i
-
-.PHONY : Light.i
-
-# target to preprocess a source file
-Light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.i
-.PHONY : Light.cpp.i
-
-Light.s: Light.cpp.s
-
-.PHONY : Light.s
-
-# target to generate assembly for a file
-Light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.s
-.PHONY : Light.cpp.s
-
-obj_loader.o: obj_loader.cpp.o
-
-.PHONY : obj_loader.o
-
-# target to build an object file
-obj_loader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/obj_loader.cpp.o
-.PHONY : obj_loader.cpp.o
-
-obj_loader.i: obj_loader.cpp.i
-
-.PHONY : obj_loader.i
-
-# target to preprocess a source file
-obj_loader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/obj_loader.cpp.i
-.PHONY : obj_loader.cpp.i
-
-obj_loader.s: obj_loader.cpp.s
-
-.PHONY : obj_loader.s
-
-# target to generate assembly for a file
-obj_loader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/obj_loader.cpp.s
-.PHONY : obj_loader.cpp.s
-
 source_files/Camera.o: source_files/Camera.cpp.o
 
 .PHONY : source_files/Camera.o
@@ -223,6 +169,33 @@ source_files/Camera.s: source_files/Camera.cpp.s
 source_files/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Camera.cpp.s
 .PHONY : source_files/Camera.cpp.s
+
+source_files/Light.o: source_files/Light.cpp.o
+
+.PHONY : source_files/Light.o
+
+# target to build an object file
+source_files/Light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Light.cpp.o
+.PHONY : source_files/Light.cpp.o
+
+source_files/Light.i: source_files/Light.cpp.i
+
+.PHONY : source_files/Light.i
+
+# target to preprocess a source file
+source_files/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Light.cpp.i
+.PHONY : source_files/Light.cpp.i
+
+source_files/Light.s: source_files/Light.cpp.s
+
+.PHONY : source_files/Light.s
+
+# target to generate assembly for a file
+source_files/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/Light.cpp.s
+.PHONY : source_files/Light.cpp.s
 
 source_files/Mesh.o: source_files/Mesh.cpp.o
 
@@ -359,6 +332,33 @@ source_files/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/main.cpp.s
 .PHONY : source_files/main.cpp.s
 
+source_files/obj_loader.o: source_files/obj_loader.cpp.o
+
+.PHONY : source_files/obj_loader.o
+
+# target to build an object file
+source_files/obj_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.o
+.PHONY : source_files/obj_loader.cpp.o
+
+source_files/obj_loader.i: source_files/obj_loader.cpp.i
+
+.PHONY : source_files/obj_loader.i
+
+# target to preprocess a source file
+source_files/obj_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.i
+.PHONY : source_files/obj_loader.cpp.i
+
+source_files/obj_loader.s: source_files/obj_loader.cpp.s
+
+.PHONY : source_files/obj_loader.s
+
+# target to generate assembly for a file
+source_files/obj_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/source_files/obj_loader.cpp.s
+.PHONY : source_files/obj_loader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -368,15 +368,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... opengl"
-	@echo "... Light.o"
-	@echo "... Light.i"
-	@echo "... Light.s"
-	@echo "... obj_loader.o"
-	@echo "... obj_loader.i"
-	@echo "... obj_loader.s"
 	@echo "... source_files/Camera.o"
 	@echo "... source_files/Camera.i"
 	@echo "... source_files/Camera.s"
+	@echo "... source_files/Light.o"
+	@echo "... source_files/Light.i"
+	@echo "... source_files/Light.s"
 	@echo "... source_files/Mesh.o"
 	@echo "... source_files/Mesh.i"
 	@echo "... source_files/Mesh.s"
@@ -392,6 +389,9 @@ help:
 	@echo "... source_files/main.o"
 	@echo "... source_files/main.i"
 	@echo "... source_files/main.s"
+	@echo "... source_files/obj_loader.o"
+	@echo "... source_files/obj_loader.i"
+	@echo "... source_files/obj_loader.s"
 .PHONY : help
 
 

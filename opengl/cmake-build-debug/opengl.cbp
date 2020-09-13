@@ -84,16 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/acoulombe/code/opengl/Light.cpp">
-			<Option target="opengl"/>
-		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/Light.h">
-			<Option target="opengl"/>
-		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Camera.h">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Entity.h">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/headers files/Light.h">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Mesh.h">
@@ -114,13 +111,13 @@
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Window.h">
 			<Option target="opengl"/>
 		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/obj_loader.cpp">
-			<Option target="opengl"/>
-		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/obj_loader.h">
+		<Unit filename="/home/acoulombe/code/opengl/headers files/obj_loader.h">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/source files/Camera.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/Light.cpp">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/source files/Mesh.cpp">
@@ -136,6 +133,9 @@
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/source files/main.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/source files/obj_loader.cpp">
 			<Option target="opengl"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/CMakeLists.txt">
