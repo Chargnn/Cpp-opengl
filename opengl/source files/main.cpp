@@ -9,12 +9,13 @@
 Mesh mesh = Mesh();
 Transform entityTransform;
 Entity entity(mesh, entityTransform);
-
+Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1));
 std::vector<Entity> entities;
+std::vector<Light> lights;
 
 Shader shader = Shader();
 Renderer* renderer;
-Camera camera(glm::vec3(450, 130, -2450), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 1000.0f);
+Camera camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
 
 float counter = 0.f;
 
@@ -59,7 +60,7 @@ int main() {
 
             shader.bindProgram();
             render();
-            update(1);
+            update(4);
             shader.unbindProgram();
         }
 
@@ -77,6 +78,9 @@ int main() {
 }
 
 void init() {
+    lights.push_back(light);
+    shader.addLights(lights);
+
     mesh.init();
     entities.push_back(entity);
 

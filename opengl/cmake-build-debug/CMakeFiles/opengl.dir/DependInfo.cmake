@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/acoulombe/code/opengl/Light.cpp" "/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles/opengl.dir/Light.cpp.o"
   "/home/acoulombe/code/opengl/obj_loader.cpp" "/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles/opengl.dir/obj_loader.cpp.o"
   "/home/acoulombe/code/opengl/source files/Camera.cpp" "/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles/opengl.dir/source_files/Camera.cpp.o"
   "/home/acoulombe/code/opengl/source files/Mesh.cpp" "/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles/opengl.dir/source_files/Mesh.cpp.o"

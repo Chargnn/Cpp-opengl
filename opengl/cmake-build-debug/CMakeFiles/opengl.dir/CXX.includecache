@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/acoulombe/code/opengl/Light.h
+glm/vec3.hpp
+-
+
+/home/acoulombe/code/opengl/headers files/Camera.h
+glm/glm.hpp
+-
+glm/gtx/transform.hpp
+-
+iostream
+-
+Window.h
+/home/acoulombe/code/opengl/headers files/Window.h
+
+/home/acoulombe/code/opengl/headers files/Entity.h
+Mesh.h
+/home/acoulombe/code/opengl/headers files/Mesh.h
+Transform.h
+/home/acoulombe/code/opengl/headers files/Transform.h
+
 /home/acoulombe/code/opengl/headers files/Mesh.h
 glm/common.hpp
 -
@@ -14,21 +34,55 @@ vector
 GL/glew.h
 -
 
-/home/acoulombe/code/opengl/headers files/OBJLoader.h
-iostream
+/home/acoulombe/code/opengl/headers files/Renderer.h
+GL/glew.h
+-
+Mesh.h
+/home/acoulombe/code/opengl/headers files/Mesh.h
+Shader.h
+/home/acoulombe/code/opengl/headers files/Shader.h
+Entity.h
+/home/acoulombe/code/opengl/headers files/Entity.h
+
+/home/acoulombe/code/opengl/headers files/Shader.h
+string
 -
 vector
 -
-string
+GL/glew.h
 -
-fstream
+Transform.h
+/home/acoulombe/code/opengl/headers files/Transform.h
+Camera.h
+/home/acoulombe/code/opengl/headers files/Camera.h
+../Light.h
+/home/acoulombe/code/opengl/Light.h
+
+/home/acoulombe/code/opengl/headers files/Transform.h
+glm/glm.hpp
 -
-math.h
+glm/gtx/transform.hpp
 -
 
-/home/acoulombe/code/opengl/source files/Mesh.cpp
+/home/acoulombe/code/opengl/headers files/Window.h
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+string
+-
+
+/home/acoulombe/code/opengl/source files/main.cpp
+iostream
+-
+glm/glm.hpp
+-
+../headers files/Window.h
+/home/acoulombe/code/opengl/headers files/Window.h
+../headers files/Shader.h
+/home/acoulombe/code/opengl/headers files/Shader.h
 ../headers files/Mesh.h
 /home/acoulombe/code/opengl/headers files/Mesh.h
-../headers files/OBJLoader.h
-/home/acoulombe/code/opengl/headers files/OBJLoader.h
+../headers files/Renderer.h
+/home/acoulombe/code/opengl/headers files/Renderer.h
 

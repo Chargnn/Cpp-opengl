@@ -14,7 +14,7 @@ class Mesh {
 public:
     std::vector<glm::vec3> vertices;
     std::vector<GLuint> indices;
-    glm::vec3* normals;
+    std::vector<glm::vec3> normals;
     glm::vec3* uvs;
     unsigned int numVertices;
 

@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/acoulombe/code/opengl/Light.cpp">
+			<Option target="opengl"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/Light.h">
+			<Option target="opengl"/>
+		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/headers files/Camera.h">
 			<Option target="opengl"/>
 		</Unit>

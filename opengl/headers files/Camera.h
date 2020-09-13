@@ -21,12 +21,6 @@ public:
         this->up = glm::vec3(0.0f, 1.0f, 0.0f);
     }
 
-    glm::mat4 getViewProjection() {
-        glm::mat4 view = glm::lookAt(this->pos, this->pos + this->front, this->up);
-
-        return this->perspective * view;
-    }
-
     glm::mat4 perspective;
     glm::vec3 pos;
     glm::vec3 front;
@@ -37,6 +31,14 @@ public:
 
     void updateInput(float);
     void updatePerspective(float fov, float aspect, float zNear = 0.001f, float zFar = 1000.0f);
+
+    glm::mat4 getView(){
+        return glm::lookAt(this->pos, this->pos + this->front, this->up);
+    }
+
+    glm::mat4 getProjection(){
+        return this->perspective;
+    }
 };
 
 #endif //OPENGL_CAMERA_H

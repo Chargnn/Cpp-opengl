@@ -143,6 +143,33 @@ opengl/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/build
 .PHONY : opengl/fast
 
+Light.o: Light.cpp.o
+
+.PHONY : Light.o
+
+# target to build an object file
+Light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.o
+.PHONY : Light.cpp.o
+
+Light.i: Light.cpp.i
+
+.PHONY : Light.i
+
+# target to preprocess a source file
+Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.i
+.PHONY : Light.cpp.i
+
+Light.s: Light.cpp.s
+
+.PHONY : Light.s
+
+# target to generate assembly for a file
+Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl.dir/build.make CMakeFiles/opengl.dir/Light.cpp.s
+.PHONY : Light.cpp.s
+
 obj_loader.o: obj_loader.cpp.o
 
 .PHONY : obj_loader.o
@@ -341,6 +368,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... opengl"
+	@echo "... Light.o"
+	@echo "... Light.i"
+	@echo "... Light.s"
 	@echo "... obj_loader.o"
 	@echo "... obj_loader.i"
 	@echo "... obj_loader.s"
