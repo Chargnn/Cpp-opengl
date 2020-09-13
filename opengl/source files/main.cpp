@@ -118,34 +118,7 @@ double lastX = 0, lastY = 0;
 
 void mouse_callback(GLFWwindow *window, double xpos, double ypos) {
     if(Window::lockedCursor) {
-        if (firstMouse) {
-            lastX = xpos;
-            lastY = ypos;
-            firstMouse = false;
-        }
-
-        float xoffset = xpos - lastX;
-        float yoffset = lastY - ypos;
-        lastX = xpos;
-        lastY = ypos;
-
-        float sensitivity = 0.1f;
-        xoffset *= sensitivity;
-        yoffset *= sensitivity;
-
-        camera.yaw += xoffset;
-        camera.pitch += yoffset;
-
-        if (camera.pitch > 89.0f)
-            camera.pitch = 89.0f;
-        if (camera.pitch < -89.0f)
-            camera.pitch = -89.0f;
-
-        glm::vec3 direction;
-        direction.x = cos(glm::radians(camera.yaw)) * cos(glm::radians(camera.pitch));
-        direction.y = sin(glm::radians(camera.pitch));
-        direction.z = sin(glm::radians(camera.yaw)) * cos(glm::radians(camera.pitch));
-        camera.front = glm::normalize(direction);
+        camera.updateMouseInput(firstMouse, lastX, lastY, xpos, ypos);
     }
 }
 

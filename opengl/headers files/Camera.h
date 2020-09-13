@@ -28,11 +28,13 @@ public:
 
     void updatePerspective(float fov, float aspect, float zNear = 0.001f, float zFar = 1000.0f);
 
-    glm::mat4 getView();
+    glm::mat4 getView() const;
 
-    glm::mat4 getProjection();
+    glm::mat4 getProjection() const;
 
     ~Camera() = default;
+
+    void updateMouseInput(bool &firstMouse, double &lastX, double &lastY, double &xpos, double &ypos);
 };
 
 #endif //OPENGL_CAMERA_H
