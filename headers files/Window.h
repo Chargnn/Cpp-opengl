@@ -10,7 +10,9 @@ public:
     static GLFWwindow *windowID;
     static Window *instance;
     static int width, height;
+
     static bool lockedCursor;
+    static bool focusedCursor;
 
     static Window *getInstance();
 

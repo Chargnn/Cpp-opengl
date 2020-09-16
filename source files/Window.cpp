@@ -12,6 +12,7 @@ int Window::width = 640;
 int Window::height = 480;
 
 bool Window::lockedCursor = false;
+bool Window::focusedCursor = false;
 
 Window::Window() {
 

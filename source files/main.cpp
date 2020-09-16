@@ -20,7 +20,12 @@ void update(float);
 void render();
 
 void mouse_callback(GLFWwindow *window, double xpos, double ypos);
-void resizeWindowCallback(GLFWwindow* window, int fbw, int fbh);
+
+void mouseButtoncallback(GLFWwindow *window, int button, int action, int mods);
+
+void mouseEnterCallback(GLFWwindow *window, int entered);
+
+void resizeWindowCallback(GLFWwindow *window, int fbw, int fbh);
 
 int main() {
     if (!glfwInit()) {
@@ -74,13 +79,14 @@ int main() {
 
 void init() {
     shader = new Shader();
-    camera = new Camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f, 5000.0f);
+    camera = new Camera(glm::vec3(-782, 50, -3228), 70.0f, (float) Window::width / (float) Window::height, 0.01f,
+                        5000.0f);
 
-    Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1), glm::vec3(1,0.00001,0.00001));
+    Light light = Light(glm::vec3(450, 70, -2450), glm::vec3(1, 1, 1), glm::vec3(1, 0.00001, 0.00001));
     lights.push_back(light);
     shader->addLights(&lights);
 
-    for(int i = 0; i < 1; i++){
+    for (int i = 0; i < 1; i++) {
         Mesh *mesh = new Mesh();
         mesh->init();
         Entity entity(mesh);
@@ -94,6 +100,8 @@ void init() {
 
     glfwSetFramebufferSizeCallback(Window::windowID, resizeWindowCallback);
     glfwSetCursorPosCallback(Window::windowID, mouse_callback);
+    glfwSetMouseButtonCallback(Window::windowID, mouseButtoncallback);
+    glfwSetCursorEnterCallback(Window::windowID, mouseEnterCallback);
     Window::focusCursor(true);
 
 }
@@ -117,15 +125,28 @@ bool firstMouse = true;
 double lastX = 0, lastY = 0;
 
 void mouse_callback(GLFWwindow *window, double xpos, double ypos) {
-    if(Window::lockedCursor) {
+    if (Window::lockedCursor) {
         camera->updateMouseInput(firstMouse, lastX, lastY, xpos, ypos);
     }
 }
 
-void resizeWindowCallback(GLFWwindow* window, int fbw, int fbh) {
+void resizeWindowCallback(GLFWwindow *window, int fbw, int fbh) {
     Window::width = fbw;
     Window::height = fbh;
 
     glViewport(0, 0, Window::width, Window::height);
     camera->updatePerspective(70.0f, (float) Window::width / (float) Window::height);
+}
+
+void mouseButtoncallback(GLFWwindow *window, int button, int action, int mods) {
+    if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
+        if(!Window::lockedCursor && Window::focusedCursor){
+            Window::focusCursor(true);
+            firstMouse = true;
+        }
+    }
+}
+
+void mouseEnterCallback(GLFWwindow *window, int entered) {
+    Window::focusedCursor = (bool) entered;
 }
