@@ -116,6 +116,32 @@ GLFW/glfw3.h
 string
 -
 
+/home/acoulombe/code/opengl/source files/Camera.cpp
+../headers files/Camera.h
+/home/acoulombe/code/opengl/headers files/Camera.h
+
+/home/acoulombe/code/opengl/source files/Renderer.cpp
+../headers files/Renderer.h
+/home/acoulombe/code/opengl/headers files/Renderer.h
+utility
+-
+
+/home/acoulombe/code/opengl/source files/Shader.cpp
+string
+-
+fstream
+-
+iostream
+-
+../headers files/Shader.h
+/home/acoulombe/code/opengl/headers files/Shader.h
+
+/home/acoulombe/code/opengl/source files/Window.cpp
+iostream
+-
+../headers files/Window.h
+/home/acoulombe/code/opengl/headers files/Window.h
+
 /home/acoulombe/code/opengl/source files/main.cpp
 iostream
 -

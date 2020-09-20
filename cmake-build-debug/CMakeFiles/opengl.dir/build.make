@@ -54,10 +54,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -207,6 +207,7 @@ opengl: CMakeFiles/opengl.dir/build.make
 opengl: vendor/glfw/src/src/libglfw3.a
 opengl: /usr/lib/x86_64-linux-gnu/librt.so
 opengl: /usr/lib/x86_64-linux-gnu/libm.so
+opengl: /usr/lib/x86_64-linux-gnu/libX11.so
 opengl: CMakeFiles/opengl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/acoulombe/code/opengl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable opengl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opengl.dir/link.txt --verbose=$(VERBOSE)

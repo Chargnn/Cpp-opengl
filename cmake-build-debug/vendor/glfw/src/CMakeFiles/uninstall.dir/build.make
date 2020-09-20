@@ -54,10 +54,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -74,7 +74,7 @@ CMAKE_BINARY_DIR = /home/acoulombe/code/opengl/cmake-build-debug
 include vendor/glfw/src/CMakeFiles/uninstall.dir/progress.make
 
 vendor/glfw/src/CMakeFiles/uninstall:
-	cd /home/acoulombe/code/opengl/cmake-build-debug/vendor/glfw/src && /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake -P /home/acoulombe/code/opengl/cmake-build-debug/vendor/glfw/src/cmake_uninstall.cmake
+	cd /home/acoulombe/code/opengl/cmake-build-debug/vendor/glfw/src && /home/acoulombe/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.62/bin/cmake/linux/bin/cmake -P /home/acoulombe/code/opengl/cmake-build-debug/vendor/glfw/src/cmake_uninstall.cmake
 
 uninstall: vendor/glfw/src/CMakeFiles/uninstall
 uninstall: vendor/glfw/src/CMakeFiles/uninstall.dir/build.make

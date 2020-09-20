@@ -5,7 +5,7 @@
 		<Option title="opengl"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\glfw\;CMake Files\vendor\glfw\CMake\;CMake Files\vendor\glfw\src\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\glfw\;CMake Files\vendor\glfw\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/acoulombe/code/opengl/cmake-build-debug"/>
@@ -334,16 +334,16 @@
 		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\vendor\glfw\"/>
 		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/CMake/cmake_uninstall.cmake.in">
-			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
-		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/CMake/glfw3.pc.in">
-			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
-		</Unit>
-		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/CMake/glfw3Config.cmake.in">
-			<Option virtualFolder="CMake Files\vendor\glfw\CMake\"/>
+		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\vendor\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\vendor\glfw\src\"/>
+		</Unit>
+		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\vendor\glfw\src\"/>
 		</Unit>
 		<Unit filename="/home/acoulombe/code/opengl/vendor/glfw/src/glfw_config.h.in">
